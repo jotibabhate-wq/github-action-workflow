@@ -1,21 +1,11 @@
 
-name: Jack
+name: My First Workflow
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  build:
+  hello:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Run Build
-        run: echo "Build Successful!"
-
-      - name: Run Test
-        run: echo "Test Successful!"
+      - name: Print Message
+        run: echo "Hello GitHub Actions"
